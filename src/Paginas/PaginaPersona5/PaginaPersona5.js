@@ -1,0 +1,82 @@
+import React from "react";
+import { HeaderC, StyledLogo, GameSense, Persona5Fundo, SecaoNota, Nota1, Titulo1, Divisao1, Nota2, Titulo2, Divisao2, Nota3, Titulo3, Divisao3, Nota4, Titulo4, Persona5Icon, Sinopse, SinopseTexto, SecaoComentario, ComentarioTitulo, NomeUsuario1, IconUsuario1, CirculoPerfil1, ComentarioTexto1, NomeUsuario2, IconUsuario2, CirculoUsuario2, TextoComentario2  } from "./PaginaPersona5.jsx";
+import { useNavigate } from "react-router-dom";
+import logo from "../../Imagens/Logo.png";
+import FundoPersona5 from "../../Imagens/Persona5Fundo.png";
+import Icon from "../../Imagens/Persona5Logo.png";
+import UsuarioIcon from "../../Imagens/UsuarioIcon.png";
+
+
+function Persona5 () {
+    return(
+    <>
+
+        <HeaderC>
+            <StyledLogo src={logo}/>
+            <GameSense>GameSense</GameSense>
+        </HeaderC>
+
+        <Persona5Fundo src={FundoPersona5}/>
+
+        <Persona5Icon src={Icon}/>
+
+        <SecaoNota>
+        
+            <Nota1>0</Nota1>
+
+            <Titulo1>Nota de Exploração do Site</Titulo1>
+
+            <Divisao1/>
+
+            <Nota2>0</Nota2>
+
+            <Titulo2>Nota para o psicológico do jogador dada pelo site</Titulo2>
+
+            <Divisao2/>
+
+            <Nota3>0</Nota3>
+
+            <Titulo3>Nota de Exploração dada pelos jogadores</Titulo3>
+
+            <Divisao3/>
+
+            <Nota4>0</Nota4>
+
+            <Titulo4>Nota para o psicológico do jogador dada pelos usuários</Titulo4>
+
+        </SecaoNota>
+
+        <Sinopse>
+            <SinopseTexto>“Em Sonic Frontiers, o inimigo de longa data, Dr. Eggman, descobre uma tecnologia antiga nas Ilhas Starfall e instala seu programa SAGE para hackeá-la e assumir o controle. Mas há mais nessa tecnologia do que ele imagina, e consequências inesperadas logo surgem. Sonic deve correr contra o tempo para descobrir a verdade, salvar seus amigos e talvez até salvar a si mesmo.”</SinopseTexto>
+        </Sinopse>
+
+        <SecaoComentario>
+
+            <ComentarioTitulo>Comentários</ComentarioTitulo>
+
+            <NomeUsuario1>Anônimo</NomeUsuario1>
+
+            <ComentarioTexto1>A minha experiencia com o jogo foi muito bacana, ele é bem feito e não me cobrou dinheiro de verdade para joga-lo inteiro que nem os jogos que estou acostumado a jogar</ComentarioTexto1>
+
+            <IconUsuario1 src={UsuarioIcon}/>
+
+            <CirculoPerfil1/>
+
+            <NomeUsuario2>Anônimo</NomeUsuario2>
+
+            <TextoComentario2>Adorei o jogo, toda vez que eu jogo sempre consigo relaxar.</TextoComentario2>
+
+            <IconUsuario2 src={UsuarioIcon}/>
+
+            <CirculoUsuario2/>
+
+
+
+        </SecaoComentario>
+
+    </>
+
+    )
+}
+
+export default Persona5
