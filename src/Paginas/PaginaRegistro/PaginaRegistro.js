@@ -8,8 +8,8 @@ import {BarraEmail, LabelEmail, PaginaFundo, LabelSenha, BarraSenha, LoginBotao,
 function PaginaRegistro(){
 
         const navigate = useNavigate()
-        const gotoRegistro = () => {
-          navigate('/Registro')
+        const gotoLogin = () => {
+          navigate('/Login')
         }
         const gotoInicio = () => {
           navigate('/Inicial')
@@ -25,7 +25,7 @@ function PaginaRegistro(){
         <LabelSenha>Senha</LabelSenha>
         <BarraSenha type="password" placeholder="Digite sua senha"></BarraSenha>
         <LoginBotao onClick={gotoInicio}>Registrar</LoginBotao>
-        <Registro onClick={gotoRegistro}>Já estou registrado.</Registro>
+        <Registro onClick={gotoLogin}>Já estou registrado.</Registro>
 
         
         

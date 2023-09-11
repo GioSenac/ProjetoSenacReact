@@ -47,7 +47,7 @@ function FinalFantasyVII () {
         </SecaoNota>
 
         <Sinopse>
-            <SinopseTexto>“Em Sonic Frontiers, o inimigo de longa data, Dr. Eggman, descobre uma tecnologia antiga nas Ilhas Starfall e instala seu programa SAGE para hackeá-la e assumir o controle. Mas há mais nessa tecnologia do que ele imagina, e consequências inesperadas logo surgem. Sonic deve correr contra o tempo para descobrir a verdade, salvar seus amigos e talvez até salvar a si mesmo.”</SinopseTexto>
+            <SinopseTexto>“A história se passa na metrópole de Midgar e acompanha o mercenário Cloud Strife, que se junta a um grupo ecoterrorista em uma tentativa de impedir que a poderosa megacorporação Shinra use a essência vital do planeta como fonte de energia.”</SinopseTexto>
         </Sinopse>
 
         <SecaoComentario>

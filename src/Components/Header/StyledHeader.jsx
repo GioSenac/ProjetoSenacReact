@@ -5,7 +5,7 @@ export const HeaderC = styled.header`
     padding: 1rem;
     text-align: center;
     border-radius: 0px 0px 30px 30px;
-    width: 81rem;
+    width: 81.5vw
     margin-bottom: 5rem;
     display: flex;
     flex-flow: space-around;
@@ -17,12 +17,12 @@ export const StyledLogo = styled.img`
 `
 
 export const GameSense = styled.p`
-font-size: 236%;
-font-family: 'Gill Sans','Gill Sans MT','Calibri','Trebuchet MS',sans-serif;
-color: #C0C0C0;
-text-align: center;
-margin-block: auto;
-position: absolute;
-top: 6%;
-left: 41%;
+    font-size: 236%;
+    font-family: 'Gill Sans','Gill Sans MT','Calibri','Trebuchet MS',sans-serif;
+    color: #C0C0C0;
+    text-align: center;
+    margin-block: auto;
+    position: absolute;
+    top: 6%;
+    left: 43.22%;
 `

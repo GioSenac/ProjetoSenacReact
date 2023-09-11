@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 export const PaginaFundo = styled.img`
     background-image: url(../../Imagens/FundoRegistro.gif);
-    width: 100.3vw;
-    height: 112vh;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0%;
     z-index: -10;

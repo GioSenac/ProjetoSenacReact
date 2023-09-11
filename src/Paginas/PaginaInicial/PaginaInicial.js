@@ -43,11 +43,6 @@ function PaginaInicial(){
 
             <Persona5Imagem src={Persona5} onClick={gotoPersona5}/>
 
-
-
-
-        
-        
         </AreaConteudo>
 
         </>

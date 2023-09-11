@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
 export const HeaderC = styled.header`
-    background-color: #0C2D53;
+    background-color: #130C65;
     padding: 1rem;
     text-align: center;
     border-radius: 0px 0px 30px 30px;
-    width: 81rem;
+    width: 81.5vw
     margin-bottom: 5rem;
     display: flex;
     flex-flow: space-around;
@@ -17,7 +17,6 @@ export const StyledLogo = styled.img`
 `
 
 export const GameSense = styled.p`
-
     font-size: 236%;
     font-family: 'Gill Sans','Gill Sans MT','Calibri','Trebuchet MS',sans-serif;
     color: #C0C0C0;
@@ -25,13 +24,13 @@ export const GameSense = styled.p`
     margin-block: auto;
     position: absolute;
     top: 6%;
-    left: 41%;
+    left: 43.22%;
 `
 
 export const FinalFantasyFundo = styled.img`
     background-image: url(../../Imagens/SonicFrontiersFundo.jpg);
-    width: 101vw;
-    height: 228vh;
+    width: 98.8vw;
+    height: 234vh;
     position: absolute;
     top: 0%;
     z-index: -10;
@@ -68,7 +67,7 @@ export const Titulo1 = styled.p`
     font-family: sans-serif;
 `
 export const Divisao1 = styled.div`
-    background-color: white;
+    background-color: black;
     height: 9vh;
     width: 0.1vw;
     position: absolute;
@@ -95,8 +94,8 @@ export const Titulo2 = styled.p`
     font-family: sans-serif;
 `
 export const Divisao2 = styled.div`
-    background-color: white;
-    height: 28.8vh;
+    background-color: black;
+    height: 31vh;
     width: 0.1vw;
     position: absolute;
     top: 1%;
@@ -124,7 +123,7 @@ export const Titulo3 = styled.p`
 `
 
 export const Divisao3 = styled.div`
-    background-color: white;
+    background-color: black;
     height: 9vh;
     width: 0.1vw;
     position: absolute;
@@ -149,18 +148,18 @@ export const Titulo4 = styled.p`
     color: white;
 `
 export const FinalFantasyIcon = styled.img`
-    width: 25vw;
-    height: 43vh;
+    width: 27vw;
+    height: 45vh;
     position: absolute;
     top: 31%;
-    left: 9%;
+    left: 8%;
 `
 export const Sinopse = styled.div`
-    background-color: #0C2D53;
+    background-color: #0A0F89;
     width: 66vw;
     height: 19vh;
     position: absolute;
-    top: 94%;
+    top: 104%;
     left: 16%;
     padding: 2%;
 `

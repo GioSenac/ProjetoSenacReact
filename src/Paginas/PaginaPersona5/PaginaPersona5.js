@@ -47,7 +47,7 @@ function Persona5 () {
         </SecaoNota>
 
         <Sinopse>
-            <SinopseTexto>“Em Sonic Frontiers, o inimigo de longa data, Dr. Eggman, descobre uma tecnologia antiga nas Ilhas Starfall e instala seu programa SAGE para hackeá-la e assumir o controle. Mas há mais nessa tecnologia do que ele imagina, e consequências inesperadas logo surgem. Sonic deve correr contra o tempo para descobrir a verdade, salvar seus amigos e talvez até salvar a si mesmo.”</SinopseTexto>
+            <SinopseTexto>“Persona 5 acontece na Tóquio de hoje e segue o protagonista Joker após sua transferência para a Academia Shujin após ser colocado em liberdade condicional por um assalto do qual ele foi falsamente acusado. Durante o curso de um ano escolar, ele e outros estudantes despertam seus poderes de Persona, tornando-se um grupo de justiceiros secretos conhecidos como os “Phantom Thieves”. Eles exploram o Metaverso, um reino sobrenatural que consiste na manifestação física dos desejos subconscientes da humanidade, para mudar a intenção maléfica dos corações dos adultos.”</SinopseTexto>
         </Sinopse>
 
         <SecaoComentario>

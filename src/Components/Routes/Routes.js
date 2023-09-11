@@ -14,6 +14,7 @@ function Rota() {
 
             <Routes>
                 <Route index element={<PaginaLogin />} />
+                <Route path="Login" element={<PaginaLogin/>}/>
                 <Route path="Registro" element={<PaginaRegistro/>}/>
                 <Route path="Inicial" element={<PaginaInicial/>}/>
                 <Route path="SonicFrontiers" element={<PaginaSonicFrontiers/>}/>
