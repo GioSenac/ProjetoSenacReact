@@ -12,6 +12,7 @@ async function login(request, response) {
     // Preparar o comando de execução no banco
     const query = "SELECT * FROM users WHERE `email` = ?";
     
+    console.log(request.body);
     // Recuperar credenciais informadas
     const params = Array(
         request.body.email

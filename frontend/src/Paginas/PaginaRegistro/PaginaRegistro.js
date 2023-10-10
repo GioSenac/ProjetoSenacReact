@@ -7,25 +7,62 @@ import {BarraEmail, LabelEmail, PaginaFundo, LabelSenha, BarraSenha, LoginBotao,
 
 function PaginaRegistro(){
 
-        const navigate = useNavigate()
-        const gotoLogin = () => {
+
+  const Register = () => {
+    const [email, setEmail] = useState("");
+    const [password, setSenha] = useState("");
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      const data = {
+        email,
+        password,
+      };
+      await api.post("/user/create", data);
+      alert("Usuário criado com sucesso!");
+    };
+  
+
+    const navigate = useNavigate()
+      const gotoLogin = () => {
           navigate('/Login')
         }
-        const gotoInicio = () => {
-          navigate('/Inicial')
+      const gotoInicio = () => {
+        navigate('/Inicial')
         }
 
         return(
         <>
        
         <Header/>
+
         <PaginaFundo src={Fundo}/>
+
+        <form onSubmit={handleSubmit}>
+
         <LabelEmail>E-mail</LabelEmail>
-        <BarraEmail type="email" placeholder="Digite seu E-mail"></BarraEmail>
+
+        <BarraEmail type="email" 
+        placeholder="Digite seu E-mail"
+        value={ email }
+        onChange={(e) => setEmail(e.target.value)}
+        >
+
+        </BarraEmail>
+
         <LabelSenha>Senha</LabelSenha>
-        <BarraSenha type="password" placeholder="Digite sua senha"></BarraSenha>
-        <LoginBotao onClick={gotoInicio}>Registrar</LoginBotao>
+
+        <BarraSenha type="password" 
+        placeholder="Digite sua senha"
+        value={password}
+        onChange={(e) => setSenha(e.target.value)}>
+
+        </BarraSenha>
+
+        <LoginBotao type="submit">Registrar</LoginBotao>
         <Registro onClick={gotoLogin}>Já estou registrado.</Registro>
+
+        </form>
 
         
         
@@ -33,6 +70,6 @@ function PaginaRegistro(){
         </>
     )
 }
-
+}
 
 export default PaginaRegistro
