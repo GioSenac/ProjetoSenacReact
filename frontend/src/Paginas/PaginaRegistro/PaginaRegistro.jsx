@@ -68,7 +68,7 @@ export const LoginBotao = styled.button`
     bottom: 23%;
     left: 45%;
 `
-export const Registro = styled.p`
+export const RegistroLogin = styled.p`
 font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
     font-size: 100%;
     color: white;
