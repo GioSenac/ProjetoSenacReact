@@ -14,9 +14,15 @@ function PaginaLogin(){
         const gotoRegistro = () => {
           navigate('/Registro')
         }
+
         const gotoInicio = () => {
           navigate('/Inicial')
         }
+      
+      const rotasInfo = (token)=>(
+        localStorage.setItem('token', token),
+        localStorage.setItem('email', email)
+      )
 
         const handleSubmit = async (e) => {
           e.preventDefault();
@@ -31,6 +37,11 @@ function PaginaLogin(){
           const response = await fetch('http://localhost:3000/api/auth/login', {
             method: 'POST',
             body: JSON.stringify(data)
+            .then(response=>{
+              console.log(response.data)
+              rotasInfo(response.data.token)
+              navigate('Inicio')
+            })
           })
           
           console.log(response);
@@ -59,9 +70,10 @@ function PaginaLogin(){
             onChange={(e) => setSenha(e.target.value)}>
 
           </BarraSenha>
-          <LoginBotao type="submit">Login</LoginBotao>
+
+          <LoginBotao type="submit" onClick={gotoInicio}>Login</LoginBotao>
           <Registro onClick={gotoRegistro}>Não estou registrado.</Registro>
-        </form>      
+        </form>    
         
 
         </>

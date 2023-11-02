@@ -14,6 +14,7 @@ async function login(request, response) {
     
     // Recuperar credenciais informadas
     const params = Array(
+        request.body.password,
         request.body.email
     );
 

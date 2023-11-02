@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 export const PaginaFundo = styled.img`
     background-image: url(../../Imagens/FundoRegistro.gif);
-    width: 100vw;
-    height: 100vh;
+    width: 98.9vw;
+    height: 115vh;
     position: absolute;
     top: 0%;
     z-index: -10;
@@ -27,8 +27,7 @@ export const BarraEmail = styled.input`
     left: 25%;
     top: 40%;
 `
-
-export const LabelSenha = styled.p`
+export const LabelName = styled.p`
     color: white;
     font-size: 107%;
     font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
@@ -37,7 +36,7 @@ export const LabelSenha = styled.p`
     left: 25.2%;
 `
 
-export const BarraSenha = styled.input`
+export const BarraName = styled.input`
     width: 47%;
     width: 47%;
     height: 2%;
@@ -47,6 +46,25 @@ export const BarraSenha = styled.input`
     position: absolute;
     left: 25%;
     top: 54%;
+`
+export const LabelSenha = styled.p`
+    color: white;
+    font-size: 107%;
+    font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
+    position: absolute;
+    top: 63%;
+    left: 25.2%;
+`
+
+export const BarraSenha = styled.input`
+    width: 47%;
+    height: 2%;
+    border: 3px solid black;
+    border-style: outset;
+    padding: 1%;
+    position: absolute;
+    left: 25%;
+    top: 70%;
 `
 
 export const LoginBotao = styled.button`
@@ -63,17 +81,16 @@ export const LoginBotao = styled.button`
     justify-content: center;
     font-size: 133%;
     text-decoration: none;
-    cursor: pointer;
     position: absolute;
-    bottom: 23%;
+    bottom: 7%;
     left: 45%;
 `
 export const RegistroLogin = styled.p`
-font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
-    font-size: 100%;
+    font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
+    font-size: 105%;
     color: white;
     position: absolute;
-    bottom: 10%;
-    left: 46.3%;
+    bottom: -7%;
+    left: 46.1%;
     cursor: pointer;
 `

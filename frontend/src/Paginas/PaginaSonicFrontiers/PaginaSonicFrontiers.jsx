@@ -5,7 +5,7 @@ export const HeaderC = styled.header`
     padding: 1rem;
     text-align: center;
     border-radius: 0px 0px 30px 30px;
-    width: 81.5vw
+    width: 81.5vw;
     margin-bottom: 5rem;
     display: flex;
     flex-flow: space-around;
@@ -95,7 +95,7 @@ export const Titulo2 = styled.p`
 `
 export const Divisao2 = styled.div`
     background-color: black;
-    height: 31vh;
+    height: 29vh;
     width: 0.1vw;
     position: absolute;
     top: 1%;

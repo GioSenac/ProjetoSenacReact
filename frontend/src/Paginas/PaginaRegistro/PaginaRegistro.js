@@ -1,35 +1,38 @@
-
 import Header from "../../Components/Header/Header.js";
-import React from "react";
+import React, {useState} from "react";
 import Fundo from "../../Imagens/FundoRegistro.gif";
 import { useNavigate } from "react-router-dom";
-import { BarraEmail, LabelEmail, PaginaFundo, LabelSenha, BarraSenha, LoginBotao, RegistroLogin } from "../PaginaRegistro/PaginaRegistro.jsx";
+import { BarraEmail, LabelEmail, PaginaFundo, LabelSenha, BarraSenha, LoginBotao, RegistroLogin, LabelName, BarraName } from "../PaginaRegistro/PaginaRegistro.jsx";
+import axios from "axios"
 
 function PaginaRegistro() {
 
+  const [email, setEmail] = useState("");
+  const [password, setSenha] = useState("");
+  const [name, setNome] = useState("")
 
-  const Registro = () => {
-    const [email, setEmail] = useState("");
-    const [password, setSenha] = useState("");
-
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      const data = {
-        email,
-        password,
-      };
-      await api.post("/user/create", data);
-      alert("Usuário criado com sucesso!");
-    };
-
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
     const gotoLogin = () => {
       navigate('/Login')
     }
-    const gotoInicio = () => {
-      navigate('/Inicial')
-    }
+
+
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+      const data = {
+        email,
+        name,
+        password,
+      };
+
+      const response = await axios.post("http://localhost:3000/api/user/create", data);
+      if(response.data.success){
+          alert("Usuário criado com sucesso!");
+          navigate('/Login')
+      }
+    };
+  
+
 
     return (
       <>
@@ -50,6 +53,14 @@ function PaginaRegistro() {
 
           </BarraEmail>
 
+          <LabelName>Nome</LabelName>
+
+          <BarraName type="name"
+            placeholder="Digite seu nome"
+            value={name}
+            onChange={(e) => setNome(e.target.value)}
+          ></BarraName>
+
           <LabelSenha>Senha</LabelSenha>
 
           <BarraSenha type="password"
@@ -65,12 +76,9 @@ function PaginaRegistro() {
 
         </form>
 
-
-
-
       </>
     )
   }
-}
 
-export default PaginaRegistro
+
+export default PaginaRegistro;

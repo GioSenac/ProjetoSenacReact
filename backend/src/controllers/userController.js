@@ -18,7 +18,7 @@ const connection = require('../config/db');
 const bcrypt = require('bcrypt');
 
 // Função que retorna todos usuários no banco de dados
-async function listUsers(request, response) {
+async function listUsers( request, response ) {
     // Preparar o comando de execução no banco
     connection.query('SELECT * FROM users', (resultserr, ) => { 
         try {  // Tenta retornar as solicitações requisitadas
@@ -52,14 +52,14 @@ async function listUsers(request, response) {
 // Função que cria um novo usuário 
 async function storeUser(request, response) {
     // Preparar o comando de execução no banco
-    const query = 'INSERT INTO users(name, email, password, status) VALUES(?, ?, ?, ?);';
+    const query = 'INSERT INTO users(name, email, password) VALUES(?, ?, ?);';
 
     // Recuperar os dados enviados na requisição
     const params = Array(
         request.body.name,
         request.body.email,
         bcrypt.hashSync(request.body.password, 10),
-        request.body.status
+        
     );
 
     // Executa a ação no banco e valida os retornos para o client que realizou a solicitação
