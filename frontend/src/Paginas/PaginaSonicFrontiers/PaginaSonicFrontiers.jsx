@@ -5,10 +5,9 @@ export const HeaderC = styled.header`
     padding: 1rem;
     text-align: center;
     border-radius: 0px 0px 30px 30px;
-    width: 81.5vw;
+    width: 96.3vw;
     margin-bottom: 5rem;
     display: flex;
-    flex-flow: space-around;
 `
 export const StyledLogo = styled.img`
     height: 90px;

@@ -9,7 +9,7 @@ function PaginaRegistro() {
 
   const [email, setEmail] = useState("");
   const [password, setSenha] = useState("");
-  const [name, setNome] = useState("")
+  const [username, setNome] = useState("")
 
   const navigate = useNavigate();
     const gotoLogin = () => {
@@ -21,14 +21,15 @@ function PaginaRegistro() {
       e.preventDefault();
       const data = {
         email,
-        name,
+        username,
         password,
       };
 
-      const response = await axios.post("http://localhost:3000/api/user/create", data);
-      if(response.data.success){
+      const response = await axios.post("http://localhost:3008/api/users/create", data);
+
+      if (response.data.success) {
           alert("Usuário criado com sucesso!");
-          navigate('/Login')
+          navigate('/Login');
       }
     };
   
@@ -57,7 +58,7 @@ function PaginaRegistro() {
 
           <BarraName type="name"
             placeholder="Digite seu nome"
-            value={name}
+            value={username}
             onChange={(e) => setNome(e.target.value)}
           ></BarraName>
 
@@ -79,6 +80,5 @@ function PaginaRegistro() {
       </>
     )
   }
-
 
 export default PaginaRegistro;

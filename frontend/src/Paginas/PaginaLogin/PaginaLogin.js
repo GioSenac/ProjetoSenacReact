@@ -1,8 +1,8 @@
 import Header from "../../Components/Header/Header.js";
-import React, { useState } from "react";
 import Fundo from "../../Imagens/FundoLogin.gif";
 import { useNavigate } from "react-router-dom";
 import {BarraEmail, LabelEmail, PaginaFundo, LabelSenha, BarraSenha, LoginBotao, Registro} from "../PaginaLogin/PaginaLogin.jsx";
+import { useState } from "react"
 
 
 function PaginaLogin(){
@@ -18,11 +18,11 @@ function PaginaLogin(){
         const gotoInicio = () => {
           navigate('/Inicial')
         }
-      
-      const rotasInfo = (token)=>(
-        localStorage.setItem('token', token),
+
+      const saveUserInfoLocalStorage =(token)=> {
+        localStorage.setItem('token', token)
         localStorage.setItem('email', email)
-      )
+      }
 
         const handleSubmit = async (e) => {
           e.preventDefault();
@@ -39,8 +39,8 @@ function PaginaLogin(){
             body: JSON.stringify(data)
             .then(response=>{
               console.log(response.data)
-              rotasInfo(response.data.token)
-              navigate('Inicio')
+              saveUserInfoLocalStorage(response.data.token)
+              navigate('/Inicial')
             })
           })
           
