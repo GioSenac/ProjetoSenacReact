@@ -3,6 +3,7 @@ import Fundo from "../../Imagens/FundoLogin.gif";
 import { useNavigate } from "react-router-dom";
 import {BarraEmail, LabelEmail, PaginaFundo, LabelSenha, BarraSenha, LoginBotao, Registro} from "../PaginaLogin/PaginaLogin.jsx";
 import { useState } from "react"
+import getConfigs from "../../libs/config.js";
 
 
 function PaginaLogin(){
@@ -34,7 +35,7 @@ function PaginaLogin(){
           //verificar se esta pegando os valores do formulario
           console.log(data);
 
-          const response = await fetch('http://localhost:3000/api/auth/login', {
+          const response = await fetch(getConfigs().serverHost+'/api/auth/login', {
             method: 'POST',
             body: JSON.stringify(data)
             .then(response=>{

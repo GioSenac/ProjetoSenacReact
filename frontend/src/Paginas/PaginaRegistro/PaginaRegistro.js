@@ -4,6 +4,7 @@ import Fundo from "../../Imagens/FundoRegistro.gif";
 import { useNavigate } from "react-router-dom";
 import { BarraEmail, LabelEmail, PaginaFundo, LabelSenha, BarraSenha, LoginBotao, RegistroLogin, LabelName, BarraName } from "../PaginaRegistro/PaginaRegistro.jsx";
 import axios from "axios"
+import getConfigs from "../../libs/config.js";
 
 function PaginaRegistro() {
 
@@ -25,7 +26,7 @@ function PaginaRegistro() {
         password,
       };
 
-      const response = await axios.post("http://localhost:3008/api/users/create", data);
+      const response = await axios.post(getConfigs().serverHost+"/api/users", data);
 
       if (response.data.success) {
           alert("Usuário criado com sucesso!");
