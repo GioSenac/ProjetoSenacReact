@@ -5,7 +5,7 @@ export const HeaderC = styled.header`
     padding: 1rem;
     text-align: center;
     border-radius: 0px 0px 30px 30px;
-    width: 96.4vw;
+    width: 97.6vw;
     margin-bottom: 5rem;
     display: flex;
 `

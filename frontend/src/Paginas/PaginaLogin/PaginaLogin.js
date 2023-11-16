@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import {BarraEmail, LabelEmail, PaginaFundo, LabelSenha, BarraSenha, LoginBotao, Registro} from "../PaginaLogin/PaginaLogin.jsx";
 import { useState } from "react"
 import getConfigs from "../../libs/config.js";
-
+import axios from 'axios';
 
 function PaginaLogin(){
 
@@ -25,7 +25,7 @@ function PaginaLogin(){
         localStorage.setItem('email', email)
       }
 
-        const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
           e.preventDefault();
 
           const data = {
@@ -35,25 +35,24 @@ function PaginaLogin(){
           //verificar se esta pegando os valores do formulario
           console.log(data);
 
-          const response = await fetch(getConfigs().serverHost+'/api/auth/login', {
-            method: 'POST',
-            body: JSON.stringify(data)
-            .then(response=>{
-              console.log(response.data)
-              saveUserInfoLocalStorage(response.data.token)
-              navigate('/Inicial')
-            })
-          })
-          
-          console.log(response);
-        }
+    const response = await axios.post('http://localhost:3008/api/auth/login', data);
+      
+    if(response.data.success) {
+      localStorage.setItem('token', response.data.data[0].token);
+      // pegar token
+      // localStorage.getItem('token')
+      navigate('/Inicial')
+    }
+    console.log(response.data);
+    
+  }
 
-        return(
+  return(
         <>
        
         <Header/>
         <PaginaFundo src={Fundo}/>
-        <form onSubmit={handleSubmit}>
+        <form>
           <LabelEmail>E-mail</LabelEmail>
           
           <BarraEmail 
@@ -72,7 +71,7 @@ function PaginaLogin(){
 
           </BarraSenha>
 
-          <LoginBotao type="submit" onClick={gotoInicio}>Login</LoginBotao>
+          <LoginBotao onClick={handleSubmit}>Login</LoginBotao>
           <Registro onClick={gotoRegistro}>Não estou registrado.</Registro>
         </form>    
         

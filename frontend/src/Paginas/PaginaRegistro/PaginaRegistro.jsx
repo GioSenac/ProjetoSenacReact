@@ -1,5 +1,23 @@
 import styled from "styled-components"
 
+export const Header = styled.div`
+    background-color: #620A59;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0px 0px 30px 30px;
+    width: 96.4vw;
+    margin-bottom: 5rem;
+    display: flex;
+    font-size: 236%;
+    font-family: 'Gill Sans','Gill Sans MT','Calibri','Trebuchet MS',sans-serif;
+    color: #C0C0C0;
+    text-align: center;
+    margin-block: auto;
+    position: absolute;
+    top: 6%;
+    left: 43.22%;
+`
+
 export const PaginaFundo = styled.img`
     background-image: url(../../Imagens/FundoRegistro.gif);
     width: 98.9vw;

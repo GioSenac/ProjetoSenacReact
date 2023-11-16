@@ -1,8 +1,7 @@
-import Header from "../../Components/Header/Header.js";
 import React, {useState} from "react";
 import Fundo from "../../Imagens/FundoRegistro.gif";
 import { useNavigate } from "react-router-dom";
-import { BarraEmail, LabelEmail, PaginaFundo, LabelSenha, BarraSenha, LoginBotao, RegistroLogin, LabelName, BarraName } from "../PaginaRegistro/PaginaRegistro.jsx";
+import { BarraEmail, LabelEmail, PaginaFundo, LabelSenha, BarraSenha, LoginBotao, RegistroLogin, LabelName, BarraName, Header } from "../PaginaRegistro/PaginaRegistro.jsx";
 import axios from "axios"
 import getConfigs from "../../libs/config.js";
 
@@ -39,7 +38,7 @@ function PaginaRegistro() {
     return (
       <>
 
-        <Header />
+        <Header>GameSense</Header>
 
         <PaginaFundo src={Fundo} />
 

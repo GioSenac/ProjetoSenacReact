@@ -10,6 +10,7 @@ export const HeaderC = styled.header`
     display: flex;
     flex-flow: space-around;
 `
+
 export const StyledLogo = styled.img`
     height: 90px;
     z-index: 100;
@@ -193,6 +194,7 @@ export const NomeUsuario1 = styled.p`
     width: 80vw;
     color: white;
     font-family: sans-serif;
+    cursor: pointer;
 `
 export const ComentarioTexto1 = styled.p`
     bottom: 38%;
@@ -209,6 +211,7 @@ export const IconUsuario1 = styled.img`
     bottom: 47%;
     left: 2.8%;
     z-index: 10;
+    cursor: pointer;
 `
 export const CirculoPerfil1 = styled.div`
     background: white;
@@ -218,6 +221,7 @@ export const CirculoPerfil1 = styled.div`
     position: absolute;
     bottom: 44%;
     left: 1.9%;
+    cursor: pointer;
 `
 export const NomeUsuario2 = styled.p`
     position: relative;
@@ -226,6 +230,7 @@ export const NomeUsuario2 = styled.p`
     width: 80vw;
     color: white;
     font-family: sans-serif;
+    cursor: pointer;
 `
 export const TextoComentario2 = styled.p`
     position: relative;
@@ -241,6 +246,7 @@ export const IconUsuario2 = styled.img`
     bottom: 9%;
     left: 2.8%;
     z-index: 10;
+    cursor: pointer;
 `
 export const CirculoUsuario2 = styled.div`
     background: white;
@@ -250,4 +256,5 @@ export const CirculoUsuario2 = styled.div`
     position: absolute;
     bottom: 6%;
     left: 1.9%; 
+    cursor: pointer;
 `

@@ -6,6 +6,8 @@ import PaginaInicial from "../../Paginas/PaginaInicial/PaginaInicial";
 import PaginaSonicFrontiers from "../../Paginas/PaginaSonicFrontiers/PaginaSonicFrontiers";
 import FinalFantasyVII from "../../Paginas/PaginaFinalFantasy/FinalFantasyVII";
 import PaginaPersona5 from "../../Paginas/PaginaPersona5/PaginaPersona5";
+import PaginaPerfil from "../../Paginas/Perfil/PaginaPerfil";
+import PaginaAdmin from "../../Admin/PaginaAdmin";
 
 function Rota() {
 
@@ -20,6 +22,8 @@ function Rota() {
                 <Route path="SonicFrontiers" element={<PaginaSonicFrontiers/>}/>
                 <Route path="FinalFantasyVII" element={<FinalFantasyVII/>}/>
                 <Route path="Persona5" element={<PaginaPersona5/>}/>
+                <Route path="Perfil" element={<PaginaPerfil/>}/>
+                <Route path="PaginaAdmin" element={<PaginaAdmin/>}/>
             </Routes>
 
         </>

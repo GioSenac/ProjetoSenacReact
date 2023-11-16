@@ -8,6 +8,12 @@ import UsuarioIcon from "../../Imagens/UsuarioIcon.png"
 
 
 function FinalFantasyVII () {
+
+    const navigate = useNavigate()
+        const gotoPerfil = () => {
+            navigate('/Perfil')
+        }
+
     return(
     <>
 
@@ -54,21 +60,21 @@ function FinalFantasyVII () {
 
             <ComentarioTitulo>Comentários</ComentarioTitulo>
 
-            <NomeUsuario1>Anônimo</NomeUsuario1>
+            <NomeUsuario1 onClick={gotoPerfil}>Anônimo</NomeUsuario1>
 
             <ComentarioTexto1>A minha experiencia com o jogo foi muito bacana, ele é bem feito e não me cobrou dinheiro de verdade para joga-lo inteiro que nem os jogos que estou acostumado a jogar</ComentarioTexto1>
 
-            <IconUsuario1 src={UsuarioIcon}/>
+            <IconUsuario1 src={UsuarioIcon} onClick={gotoPerfil}/>
 
-            <CirculoPerfil1/>
+            <CirculoPerfil1 onClick={gotoPerfil}/>
 
-            <NomeUsuario2>Anônimo</NomeUsuario2>
+            <NomeUsuario2 onClick={gotoPerfil}>Anônimo</NomeUsuario2>
 
             <TextoComentario2>Adorei o jogo, toda vez que eu jogo sempre consigo relaxar.</TextoComentario2>
 
-            <IconUsuario2 src={UsuarioIcon}/>
+            <IconUsuario2 src={UsuarioIcon} onClick={gotoPerfil}/>
 
-            <CirculoUsuario2/>
+            <CirculoUsuario2 onClick={gotoPerfil}/>
 
 
 

@@ -22,7 +22,7 @@ async function login(request, response) {
     connection.query(query, params, (err, results) => {
         try {            
             if (results.length > 0) {                
-                bcrypt.compare(request.body.password, results[0].password, (err, result) => {
+                bcrypt.compare(request.body.senha, results[0].password, (err, result) => {
                     if (err) {                        
                         return response.status(401).send({
                           msg: 'Email or password is incorrect!'
