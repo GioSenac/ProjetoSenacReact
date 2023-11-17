@@ -63,7 +63,6 @@ export const LoginBotao = styled.button`
     justify-content: center;
     font-size: 133%;
     text-decoration: none;
-    cursor: pointer;
     position: absolute;
     bottom: 23%;
     left: 45%;
