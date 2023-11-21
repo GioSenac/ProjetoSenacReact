@@ -155,9 +155,9 @@ export const LabelCorSinopse = styled.p`
     color: white;
     font-size: 107%;
     font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
-    position: relative;
-    top: 85%;
-    left: 3%;
+    position: absolute;
+    top: 83%;
+    left: 8%;
 `
 
 export const CorSinopse = styled.input`
@@ -173,7 +173,7 @@ export const LabelCorComentarios = styled.p`
     color: white;
     font-size: 107%;
     font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
-    position: relative;
+    position: absolute;
     top: 83%;
     left: 72%;
 `
@@ -182,27 +182,26 @@ export const CorComentarios = styled.input`
     border: 3px solid black;
     border-style: outset;
     padding: 1%;
-    position: relative;
-    top: 84%;
+    position: absolute;
+    top: 88%;
     left: 81%;
 `
 
 export const Botao = styled.button`
-         background-color: black;
+    background-color: black;
     text-size-adjust: 100%;
     color: #ffffff;
     padding: 0.5rem;
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    width: 10%;
+    width: 19%;
     display: flex;
     margin: auto;
     justify-content: center;
-    font-size: 133%;
+    font-size: 247%;
     text-decoration: none;
     position: absolute;
-    bottom: 23%;
-    left: 45%;
-
+    bottom: 4%;
+    left: 41.5%;
 `

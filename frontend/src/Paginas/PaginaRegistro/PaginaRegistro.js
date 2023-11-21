@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 import Fundo from "../../Imagens/FundoRegistro.gif";
 import { useNavigate } from "react-router-dom";
-import { BarraEmail, LabelEmail, PaginaFundo, LabelSenha, BarraSenha, LoginBotao, RegistroLogin, LabelName, BarraName, Header } from "../PaginaRegistro/PaginaRegistro.jsx";
+import { BarraEmail, LabelEmail, PaginaFundo, LabelSenha, BarraSenha, LoginBotao, RegistroLogin, LabelName, BarraName, HeaderC, StyledLogo, GameSense } from "../PaginaRegistro/PaginaRegistro.jsx";
 import axios from "axios"
 import getConfigs from "../../libs/config.js";
+import logo from "../../Imagens/Logo.png"
 
 function PaginaRegistro() {
 
@@ -32,13 +33,14 @@ function PaginaRegistro() {
           navigate('/Login');
       }
     };
-  
-
 
     return (
       <>
 
-        <Header>GameSense</Header>
+        <HeaderC>
+            <StyledLogo src={logo}/>
+            <GameSense>GameSense</GameSense>
+        </HeaderC>
 
         <PaginaFundo src={Fundo} />
 
