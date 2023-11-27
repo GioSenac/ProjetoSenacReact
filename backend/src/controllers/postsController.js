@@ -3,32 +3,28 @@ const upload = require('../config/multerConfig');
 
 async function Posts(request, response) {
 
-  const uploadMiddleware = upload.fields([
-    { name: 'fundo', maxCount: 1 },
-    { name: 'icone', maxCount: 1 },
-    { name: 'ImagemPaginaPrincipal', maxCount: 1 },
-  ]);
+  const query = 'INSERT INTO posts (fundo, icone, ImagemPaginaInicial, titulo, notasAntiConsumidoras, notasEmocional, sinopse, corHeader, corSinopse, corComentarios) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
 
-  uploadMiddleware(request, response, (err) => {
-    if (err) {
-      return response.status(500).json({
-        success: false,
-        message: 'Erro no upload de arquivos.',
-      });
-    }
+    let params = Array();
+    console.log(request.body);
+    request.files.map((file) => {
+      params.push(file.filename);
+    })
 
-    const query = 'INSERT INTO posts (titulo, notasADM, sinopse, fundo, icone, ImagemPaginaPrincipal) VALUES (?, ?, ?, ?, ?, ?)';
+    const notasAntiConsumidoras = request.body.notasAntiConsumidoras === 'null' ? null : parseInt(request.body.notasAntiConsumidoras);
+    const notasEmocionais = request.body.notasEmocionais === 'null' ? null : parseInt(request.body.notasEmocionais);
 
-    const params = [
-      request.body.titulo,
-      request.body.notasADM,
-      request.body.sinopse,
-      request.files['fundo'][0].filename,
-      request.files['icone'][0].filename,
-      request.files['ImagemPaginaPrincipal'][0].filename,
-    ];
+  //Colocar os params pushs dos textos e cores
+    params.push(request.body.titulo);
+    params.push(notasAntiConsumidoras);
+    params.push(request.body.notasEmocionais);
+    params.push(request.body.sinopse);
+    params.push(request.body.corHeader);
+    params.push(request.body.corSinopse);
+    params.push(request.body.corComentarios);
 
     connection.query(query, params, (err, results) => {
+      console.log(results)
       if (results) {
         response.status(201).json({
           success: true,
@@ -43,7 +39,6 @@ async function Posts(request, response) {
         });
       }
     });
-  });
 }
 
 module.exports = {

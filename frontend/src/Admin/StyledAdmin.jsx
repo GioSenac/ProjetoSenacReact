@@ -60,24 +60,46 @@ export const BarraSinopse = styled.input`
     top: 22%;
 `
 
-export const LabelNota = styled.p`
+export const LabelNotaAntiConsumidora = styled.p`
     font-size: 107%;
     font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
     position: absolute;
     top: 29%;
-    left: 44%;
+    left: 37%;
     color: white;
 `
 
-export const BarraNota = styled.input`
+export const BarraNotaAntiConsumidor = styled.input`
     border: 3px solid black;
     border-style: outset;
     padding: 1%;
     position: absolute;
     top: 34%;
-    left: 46.6%;
+    left: 38.6%;
     width: 3vw;
 `
+
+export const LabelNotaEmocional = styled.p`
+    font-size: 107%;
+    font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
+    position: absolute;
+    top: 29%;
+    left: 48%;
+    color: white;
+    width: 19%;
+    text-align: center;
+`
+
+export const BarraNotaEmocional = styled.input`
+    border: 3px solid black;
+    border-style: outset;
+    padding: 1%;
+    position: absolute;
+    top: 34%;
+    left: 54.6%;
+    width: 3vw;
+`
+
 export const LabelImagemFundo = styled.p`
     color: white;
     font-size: 107%;

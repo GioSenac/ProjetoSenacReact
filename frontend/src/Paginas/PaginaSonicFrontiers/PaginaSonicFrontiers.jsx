@@ -192,6 +192,7 @@ export const NomeUsuario1 = styled.p`
     width: 80vw;
     color: white;
     font-family: sans-serif;
+    cursor: pointer;
 `
 export const ComentarioTexto1 = styled.p`
     bottom: 38%;
@@ -208,6 +209,7 @@ export const IconUsuario1 = styled.img`
     bottom: 47%;
     left: 2.8%;
     z-index: 10;
+    cursor: pointer;
 `
 export const CirculoPerfil1 = styled.div`
     background: white;
@@ -217,6 +219,7 @@ export const CirculoPerfil1 = styled.div`
     position: absolute;
     bottom: 44%;
     left: 1.9%;
+    cursor: pointer;
 `
 export const NomeUsuario2 = styled.p`
     position: relative;
@@ -225,6 +228,7 @@ export const NomeUsuario2 = styled.p`
     width: 80vw;
     color: white;
     font-family: sans-serif;
+    cursor: pointer;
 `
 export const TextoComentario2 = styled.p`
     position: relative;
@@ -240,6 +244,7 @@ export const IconUsuario2 = styled.img`
     bottom: 9%;
     left: 2.8%;
     z-index: 10;
+    cursor: pointer;
 `
 export const CirculoUsuario2 = styled.div`
     background: white;
@@ -248,5 +253,146 @@ export const CirculoUsuario2 = styled.div`
     height: 9vh;
     position: absolute;
     bottom: 6%;
-    left: 1.9%; 
+    left: 1.9%;
+    cursor: pointer;
+`
+export const ModalButton = styled.button`
+    background-color: #111027;
+    text-size-adjust: 100%;
+    color: #ffffff;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 13%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-size: 133%;
+    text-decoration: none;
+    position: absolute;
+    bottom: 23%;
+    left: 74.4%;
+`
+export const LabelNotaAntiConsumidora = styled.p`
+    font-size: 107%;
+    font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
+    position: absolute;
+    top: 35%;
+    left: 31%;
+    color: white;
+    width: 15vw;
+    text-align: center;
+`
+
+export const BarraNotaAntiConsumidor = styled.input`
+    border: 3px solid black;
+    border-style: outset;
+    padding: 1%;
+    position: absolute;
+    top: 47%;
+    left: 35.6%;
+    width: 3vw;
+`
+
+export const LabelNotaEmocional = styled.p`
+    font-size: 107%;
+    font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    color: white;
+    width: 20%;
+    text-align: center;
+`
+
+export const BarraNotaEmocional = styled.input`
+    border: 3px solid black;
+    border-style: outset;
+    padding: 1%;
+    position: absolute;
+    top: 47%;
+    left: 56.6%;
+    width: 3vw;
+`
+
+export const BarraComentarios = styled.input`
+    border: 3px solid black;
+    border-style: outset;
+    padding: 1%;
+    position: absolute;
+    top: 45%;
+    left: 32.3%;
+    width: 32vw;
+    height: 5vh;
+`
+
+export const ModalTexto = styled.p`
+    font-size: 107%;
+    font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
+    position: absolute;
+    top: 35%;
+    left: 39%;
+    width: 20%;
+    text-align: center;
+    color: white;
+`
+
+export const ModalButtonComentarios = styled.button`
+    background-color: #070537;
+    text-size-adjust: 100%;
+    color: #ffffff;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 13%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-size: 133%;
+    text-decoration: none;
+    position: absolute;
+    bottom: -97%;
+    left: 76.4%;
+    z-index: 20;
+`
+
+export const BotaoPostar = styled.button`
+    background-color: #000000;
+    text-size-adjust: 13%;
+    color: #ffffff;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 6%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-size: 105%;
+    text-decoration: none;
+    position: absolute;
+    top: 60%;
+    left: 46.3%;
+    z-index: 20;
+`
+export const BotaoPostarNota = styled.button`
+    background-color: #000000;
+    text-size-adjust: 13%;
+    color: #ffffff;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 6%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-size: 105%;
+    text-decoration: none;
+    position: absolute;
+    top: 58%;
+    left: 46.3%;
+    z-index: 20;
 `

@@ -1,6 +1,6 @@
-import Header from "../../Components/Header/Header.js";
+import logo from "../../Imagens/Logo.png";
 import React from "react";
-import { Fundo, AreaConteudo, SonicFrontiersTexto, TituloConteudo, SonicFrontiersImagem, FinalFantasyTexto, FinalFantasyImagem, Persona5Texto, Persona5Imagem } from "./PaginaInicial.jsx"
+import { Fundo, AreaConteudo, SonicFrontiersTexto, TituloConteudo, SonicFrontiersImagem, FinalFantasyTexto, FinalFantasyImagem, Persona5Texto, Persona5Imagem, HeaderC, StyledLogo, GameSense } from "./PaginaInicial.jsx"
 import { useNavigate } from "react-router-dom";
 import PaginaFundo from "../../Imagens/FundoInicial.gif"
 import SonicFrontiers from "../../Imagens/SonicFrontiersInicial.png";
@@ -23,7 +23,11 @@ function PaginaInicial(){
   
     return(
         <>
-        <Header/>
+        
+        <HeaderC>
+            <StyledLogo src={logo}/>
+            <GameSense>GameSense</GameSense>
+        </HeaderC>
 
         <Fundo src={PaginaFundo}/>
 

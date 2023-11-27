@@ -25,11 +25,7 @@ const upload = require('./config/multerConfig.js');
 
 // Set up a route for file uploads
 
-app.post('/upload', upload.single('file'), (req, res) => {
-    
-  // Handle the uploaded file
-  res.json({ message: 'File uploaded successfully!' });
-});
+app.use('/uploads', express.static(__dirname + '\\upload'));
 
 // Habilitar as rotas na aplicação
 
